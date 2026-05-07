@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efood - Delivery de Comida</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Efood</h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" class="nav-link">Restaurantes</a></li>
+                        <li><a href="#" class="nav-link">Sobre</a></li>
+                        <li><a href="#" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2>Os melhores restaurantes da cidade</h2>
+                <p>Peça sua comida favorita com delivery rápido</p>
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <div class="container">
+                <h2 class="section-title">Restaurantes Destaques</h2>
+                <div class="restaurants-grid" id="restaurantsGrid">
+                    <!-- Restaurantes serão carregados via AJAX -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-modal" id="menuModal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-header">
+                    <img id="modalRestaurantImage" src="" alt="" class="modal-restaurant-image">
+                    <h3 id="modalRestaurantName"></h3>
+                    <p id="modalRestaurantDescription"></p>
+                </div>
+                <div class="modal-body">
+                    <h4>Cardápio</h4>
+                    <div class="menu-items" id="menuItems">
+                        <!-- Itens do cardápio serão carregados via AJAX -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="purchase-modal" id="purchaseModal">
+            <div class="modal-overlay" id="purchaseModalOverlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="purchaseModalClose">&times;</button>
+                <div class="modal-header">
+                    <h3>Finalizar Compra</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="purchase-item" id="purchaseItem">
+                        <!-- Item selecionado será exibido aqui -->
+                    </div>
+                    <form class="purchase-form" id="purchaseForm">
+                        <div class="form-group">
+                            <label for="customerName">Nome Completo</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Telefone</label>
+                            <input type="tel" id="customerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryAddress">Endereço de Entrega</label>
+                            <textarea id="deliveryAddress" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantidade</label>
+                            <input type="number" id="quantity" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="observations">Observações</label>
+                            <textarea id="observations" placeholder="Alguma observação sobre seu pedido?"></textarea>
+                        </div>
+                        <div class="total-price">
+                            <span>Total: R$ <span id="totalPrice">0,00</span></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirmar Pedido</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Efood</h4>
+                    <p>O melhor delivery de comida da sua cidade</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#">Restaurantes</a></li>
+                        <li><a href="#">Promoções</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Email: contato@efood.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Efood. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
